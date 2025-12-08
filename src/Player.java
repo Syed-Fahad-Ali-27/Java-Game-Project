@@ -3,13 +3,13 @@ public class Player extends Character{
     private Item[] inventory;
     private Location location;
 
-    public Player() {
-        super();
+    public Player(String name, String description) {
+        super(name, description);
         location = new Location(0,0);
     }
 
-    public Player(int x, int y) {
-        super();
+    public Player(String name, String description, int x, int y) {
+        super(name, description);
         location = new Location(x, y);
     }
 
@@ -24,10 +24,16 @@ public class Player extends Character{
         location.setX(location.getX() + 1);
     }
     public void goUp() {
-        location.setY(location.getY() - 1);
+        location.setY(location.getY() + 1);
     }
     public void goDown() {
-        location.setY(location.getY() + 1);
+        location.setY(location.getY() - 1);
+    }
+
+    public String getLocation() {
+        int x = location.getX();
+        int y = location.getY();
+        return x + ", " + y;
     }
 
 }
