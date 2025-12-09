@@ -4,12 +4,12 @@ public class Player extends Character{
     private Location location;
 
     public Player(String name, String description) {
-        super(name, description);
+        super(name, description,10,10);
         location = new Location(0,0);
     }
 
     public Player(String name, String description, int x, int y) {
-        super(name, description);
+        super(name, description,10,10);
         location = new Location(x, y);
     }
 
@@ -27,6 +27,22 @@ public class Player extends Character{
         location.setY(location.getY() + 1);
     }
     public void goDown() {
+        location.setY(location.getY() - 1);
+    }
+    public void goTopRight() {
+        location.setX(location.getX() + 1);
+        location.setY(location.getY() + 1);
+    }
+    public void goBottomRight() {
+        location.setX(location.getX() + 1);
+        location.setY(location.getY() - 1);
+    }
+    public void goTopLeft() {
+        location.setX(location.getX() - 1);
+        location.setY(location.getY() + 1);
+    }
+    public void goBottomLeft() {
+        location.setX(location.getX() - 1);
         location.setY(location.getY() - 1);
     }
 
