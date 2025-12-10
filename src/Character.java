@@ -3,7 +3,7 @@ public abstract class Character {
     protected String name;
     protected String description;
     protected int health;
-    protected int maxHealth;
+    protected final int maxHealth;
 
     public Character(String name, String description, int health, int maxHealth) {
         this.name = name;

@@ -29,22 +29,6 @@ public class Player extends Character{
     public void goDown() {
         location.setY(location.getY() - 1);
     }
-    public void goTopRight() {
-        location.setX(location.getX() + 1);
-        location.setY(location.getY() + 1);
-    }
-    public void goBottomRight() {
-        location.setX(location.getX() + 1);
-        location.setY(location.getY() - 1);
-    }
-    public void goTopLeft() {
-        location.setX(location.getX() - 1);
-        location.setY(location.getY() + 1);
-    }
-    public void goBottomLeft() {
-        location.setX(location.getX() - 1);
-        location.setY(location.getY() - 1);
-    }
 
     public String getLocation() {
         int x = location.getX();
