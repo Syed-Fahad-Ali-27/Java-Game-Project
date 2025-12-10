@@ -1,16 +1,11 @@
 public class Player extends Character{
 
     private Item[] inventory;
-    private Location location;
-
-    public Player(String name, String description) {
-        super(name, description,10,10);
-        location = new Location(0,0);
-    }
 
     public Player(String name, String description, int x, int y) {
         super(name, description,10,10);
-        location = new Location(x, y);
+        setXPos(x);
+        setYPos(y);
     }
 
     public Item[] getInventory() {
@@ -18,21 +13,21 @@ public class Player extends Character{
     }
 
     public void goLeft() {
-        location.setX(location.getX() - 1);
+        setXPos(getXPos() - 1);
     }
     public void goRight() {
-        location.setX(location.getX() + 1);
+        setXPos(getXPos() + 1);
     }
     public void goUp() {
-        location.setY(location.getY() + 1);
+        setYPos(getYPos() + 1);
     }
     public void goDown() {
-        location.setY(location.getY() - 1);
+        setYPos(getYPos() - 1);
     }
 
     public String getLocation() {
-        int x = location.getX();
-        int y = location.getY();
+        int x = getXPos();
+        int y = getYPos();
         return x + ", " + y;
     }
 
