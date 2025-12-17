@@ -3,16 +3,16 @@ public class Passkey extends Item{
     //create object Passkey
     public Passkey() {
         super(
-                "Passkey"
-                "Passkey can be used to unlock the Vault"
+                "Passkey",
+                "Passkey can be used to unlock the Vault",
                 true
-        )
+        );
     }
     //Implement abstract method for how the passkey should be used
     @Override
-    public boolean use(player Player, location Location) {
+    public boolean use(Player player, Location location) {
         //Syringe can be used at the vault to unlock it
-        if (Location.getName().equals("The Vault")) {
+        if (player.getName().equals("The Vault")) {
             System.out.println("You can unlock the Vault");
             return true;
         }
@@ -22,6 +22,5 @@ public class Passkey extends Item{
             return false; //passkey wasn't used successfully
         }
     }
-}
 
 }

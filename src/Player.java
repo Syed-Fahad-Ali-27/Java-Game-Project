@@ -3,9 +3,8 @@ public class Player extends Character{
     private Item[] inventory;
 
     public Player(String name, String description, int x, int y) {
-        super(name, description,10,10);
-        setXPos(x);
-        setYPos(y);
+        super(name, description,10,10,x,y);
+        Location loc = getLoc();
     }
 
     public Item[] getInventory() {
@@ -13,22 +12,16 @@ public class Player extends Character{
     }
 
     public void goLeft() {
-        setXPos(getXPos() - 1);
+        location.setX(location.getX() - 1);
     }
     public void goRight() {
-        setXPos(getXPos() + 1);
+
     }
     public void goUp() {
-        setYPos(getYPos() + 1);
+
     }
     public void goDown() {
-        setYPos(getYPos() - 1);
-    }
 
-    public String getLocation() {
-        int x = getXPos();
-        int y = getYPos();
-        return x + ", " + y;
     }
 
 }

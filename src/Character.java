@@ -4,14 +4,14 @@ public abstract class Character {
     protected String description;
     protected int health;
     protected final int maxHealth;
-    protected int xPos;
-    protected int yPos;
+    protected Location loc;
 
-    public Character(String name, String description, int health, int maxHealth) {
+    public Character(String name, String description, int health, int maxHealth, int x, int y) {
         this.name = name;
         this.description = description;
         this.health = health;
         this.maxHealth = maxHealth;
+        loc = new Location(x, y);
     }
 
     public String getName() {
@@ -26,18 +26,8 @@ public abstract class Character {
     public int getMaxHealth() {
         return maxHealth;
     }
-    public int getXPos() {
-        return xPos;
-    }
-    public int getYPos() {
-        return yPos;
-    }
-
-    public void setXPos(int xPos) {
-        this.xPos = xPos;
-    }
-    public void setYPos(int yPos) {
-        this.yPos = yPos;
+    public Location getLoc() {
+        return loc;
     }
 
 }

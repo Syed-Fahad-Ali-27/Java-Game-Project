@@ -33,6 +33,6 @@ public abstract class Item {
    we need to use an abstract method as each child class will implement it on its own
    with the parameters being player and location
     */
-    public abstract boolean use(player Player, location Location);
+    public abstract boolean use(Player Player, Location Location);
 }
 
